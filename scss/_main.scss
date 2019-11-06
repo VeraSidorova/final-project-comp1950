@@ -3,7 +3,7 @@
 //top-banner styles//
 .top-banner > h1 {
     color: $text-color-light;  /* Fallback: assume this color ON TOP of image */
-   background: url(images/index/code.jpg) no-repeat;
-   -webkit-background-clip: text;
+   background: url(../images/code.jpg) no-repeat;
+   background-clip: text;
    -webkit-text-fill-color: transparent;
 }

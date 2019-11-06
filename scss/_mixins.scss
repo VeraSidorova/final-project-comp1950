@@ -1,0 +1,11 @@
+// Mixins
+
+// Mixin for centering element
+// with margin-left: auto
+// and margin-right: auto;
+@mixin margin-center {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
