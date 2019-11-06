@@ -1,0 +1,13 @@
+// Body typography and color styles
+body {
+    font-family: $body-font;
+    background-color: $body-bg-color;
+}
+
+h1, h2, h3, nav a {
+    font-family: $heading-font;
+}
+
+h2 {
+    font-size: 2.1em;
+}
