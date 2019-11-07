@@ -1,0 +1,20 @@
+// Header styles
+header {
+    background-color: $brand-color;
+    height: auto;
+    
+    //Header content layout
+    .header-content-wrap {
+        @include flex-layout-row;
+        max-width: $wrapper-max-width;
+        @include margin-center;
+        padding: 0 $padding;
+    }
+    //Logo style
+    h1 {
+        color: $text-color-light;
+        font-size: 2.5em;
+        margin: 0;
+        padding: $padding/2;
+    }
+}
