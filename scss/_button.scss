@@ -1,0 +1,30 @@
+// Menu button Styles
+//Button design
+button {
+    color: $text-color-light;
+    text-transform: uppercase;
+    background-color: $button-bg-color;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+}
+
+//Shows Menu buttom only on skreens less than tablet size
+.btn-menu {
+    display: none;
+
+    @media (max-width: $tabletPortrait){
+        display: block;
+        width: auto;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        $transition: all 0.3s ease-in-out;
+        position: relative;
+        transition: $transition;
+
+        .show & {
+            background-color: transparent;
+        } 
+    } 
+}
