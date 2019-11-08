@@ -30,7 +30,7 @@
 .banner-wrapper {
     font-family: 'Oswald', sans-serif;
     color: $text-color-dark;
-    background-color: $wrapper-bg-color;
+    //background-color: $wrapper-bg-color;
     text-align: center;
 }
 
@@ -68,6 +68,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media (min-width: $phoneSmall) {
+        font-size: 3em;
+    }
 }
 
 .clip-text:before,
