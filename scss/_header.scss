@@ -4,7 +4,7 @@ header {
     height: auto;
     
     //Header content layout
-    .header-content-wrap {
+    .header-content {
         @include flex-layout-row;
         max-width: $wrapper-max-width;
         @include margin-center;
@@ -16,5 +16,66 @@ header {
         font-size: 2.5em;
         margin: 0;
         padding: $padding/2;
+    }
+
+    //nav styles
+    nav {
+        // locally scoped variable
+        height: auto;
+        display: flex;
+        align-items: right;
+        align-self: center;
+    
+        ul {
+            //Help to show nav list on bigger than tablet screens
+            //@include flatten;
+            list-style: none;
+            display: flex;
+    
+                //Shows nav list on tablet size screens and smaller
+                @media (max-width: $tabletPortrait) {
+                    display: block;
+                }
+        }
+    
+        li {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            
+        }
+    
+        a {
+            //show nav list on bigger than tablet screens horizontally
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 40px;
+            padding: 0 10px ;
+            margin: 0px;
+            align-self: center;
+            
+            
+            #{$link-hover-selector} {
+                background-color: rgba(white, 0.3);   
+            }
+        }
+    
+        @media (min-width: $tabletPortrait) {
+            //Hide nav list
+            display: none;
+            width: 100%;
+    
+            //Help JS show nav list
+            .show & {
+                display: block;
+            }
+    
+            //Shows nav list vertically when Menu batton clicked
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
