@@ -20,3 +20,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@mixin flex-layout-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -9,22 +9,24 @@ button {
     outline: none;
 }
 
-//Shows Menu buttom only on skreens less than tablet size
+//Hide Menu buttom only on skreens biger than mobile
 .btn-menu {
-    display: none;
+    display: block;
+    width: auto;
+    border: none;
+    padding: 5px;
+    margin: auto;
+    cursor: pointer;
+    $transition: all 0.3s ease-in-out;
+    position: relative;
+    transition: $transition;
 
-    @media (max-width: $tabletPortrait){
-        display: block;
-        width: auto;
-        border: none;
-        padding: 5px;
-        cursor: pointer;
-        $transition: all 0.3s ease-in-out;
-        position: relative;
-        transition: $transition;
+    .show & {
+        background-color: transparent;
+        color: $button-bg-color;
+    } 
 
-        .show & {
-            background-color: transparent;
-        } 
+    @media (min-width: $tabletPortrait){
+        display: none;
     } 
 }
