@@ -8,7 +8,7 @@ $brand-color: #146DC1;
 $body-bg-color: rgb(179, 182, 184);
 $wrapper-bg-color: white;
 $footer-bg-color: rgb(12, 64, 112);
-$button-bg-color: #79b89d;
+$accent-color: #79b89d;
 
 // Text Colors
 $text-color-dark: black;
@@ -33,8 +33,3 @@ $phoneSmall: em(320);
 $phonePortrait: em(420);
 $tabletPortrait: em(850);
 $desktop: em(1920);
-
-
-
-// Utility variables
-$link-hover-selector: '&:hover, &:focus, &:active';

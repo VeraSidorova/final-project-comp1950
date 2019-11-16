@@ -3,7 +3,7 @@
 button {
     color: $text-color-light;
     text-transform: uppercase;
-    background-color: $button-bg-color;
+    background-color: $accent-color;
     font-size: 1.2em;
     border: none;
     outline: none;
@@ -23,7 +23,7 @@ button {
 
     .show & {
         background-color: transparent;
-        color: $button-bg-color;
+        color: $accent-color;
     } 
 
     @media (min-width: $tabletPortrait){
