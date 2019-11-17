@@ -17,6 +17,7 @@ header {
             justify-content: space-between;
         }
     }
+
     //Logo style
     h1 {
         color: $text-color-light;
@@ -25,9 +26,7 @@ header {
 
         @media (min-width: $tabletPortrait) {
             margin: 0; 
-        }
-
-        
+        }  
     }
 
     //nav styles
@@ -41,6 +40,7 @@ header {
 
         ul {
             list-style-type: none;
+            padding: 0;
         }
 
         li {
@@ -63,7 +63,6 @@ header {
             ul {
                 @include flex-layout-row;
             }
-        } 
-            
+        }    
     } 
  }

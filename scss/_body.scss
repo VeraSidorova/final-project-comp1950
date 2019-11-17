@@ -4,10 +4,21 @@ body {
     background-color: $body-bg-color;
 }
 
-h1, h2, h3, nav a {
+h1, h2, h3 {
     font-family: $heading-font;
+    color: $header-color;
+    text-transform: uppercase;
+    margin: 15px;
 }
 
 h2 {
     font-size: 2.1em;
+}
+
+p {
+    margin: 1em 15px 1em 15px;
+}
+
+nav a {
+    font-family: $heading-font;
 }
