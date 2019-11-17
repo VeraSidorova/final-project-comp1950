@@ -1,114 +1,54 @@
 //Main styles//
 
 //top-banner styles//
-.top-banner > h1 {
-    color: $text-color-light;  /* Fallback: assume this color ON TOP of image */
-   background: url(../images/code.jpg) no-repeat;
-   background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
+
 
 /* 
+
   Based from this article from Divya Manian - 
   http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
 */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-*,
-:before,
-:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-
 .banner-wrapper {
     font-family: 'Oswald', sans-serif;
     color: $text-color-dark;
-    //background-color: $wrapper-bg-color;
     text-align: center;
+}
+
+.top-banner {
+    border-bottom: dotted 2px rgba(208, 217, 226, 0.822);;
 }
 
 .title {
-    font-size: 2em;
+    font-size: 5vw;
     position: relative;
-    margin: 0 auto 1em;
-    padding: 1em 1em .25em 1em;
+    margin: 0 auto;
+    padding: $padding $padding 0 $padding;
     text-align: center;
     text-transform: uppercase;
+    color: $header-color;
 }
-.title:after {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 240px;
-    height: 4px;
-    margin-left: -120px;
-    content: '';
-    background-color: #fff;
-}
-
+/*photo background for letters*/
 /* Clip text element */
 .clip-text {
-    font-size: 6em;
+    font-size: 20vw;
     font-weight: bold;
     line-height: 1;
     position: relative;
     display: inline-block;
-    margin: .25em;
-    padding: .5em .75em;
+    margin: 30px;
+    box-sizing: inherit;
+    width: 81vw;
     text-align: center;
     /* Color fallback */
-    color: #fff;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @media (min-width: $phoneSmall) {
-        font-size: 3em;
+    @media (min-width: $tabletSmall) {
+        font-size: 17vw;
+        width: 71.5vw;
     }
-}
-
-.clip-text:before,
-.clip-text:after {
-    position: absolute;
-    content: '';
-}
-
-/* Background */
-.clip-text:before {
-    z-index: -2;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: inherit;
-}
-
-/* Text Background (black zone) */
-.clip-text:after {
-    position: absolute;
-    z-index: -1;
-    top: .125em;
-    right: .125em;
-    bottom: .125em;
-    left: .125em;
-    background-color: #000;
-}
-
-
-/* Change the background position to display letter when the black zone isn't here */
-.clip-text--no-textzone:before {
-    background-position: -.75em 0;
-}
-
-.clip-text--no-textzone:after {
-    content: none;
 }
 
 /* Use Background-size cover for photo background and no-repeat background */
@@ -116,8 +56,8 @@
 .clip-text--cover:before {
     background-repeat: no-repeat;
     -webkit-background-size: cover;
-            background-size: cover;
-  background-position: 50% 50%;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 /* Background image  */
@@ -126,3 +66,84 @@
     background-color: $brand-color;
 }
 
+/*mid-banner styles*/
+//mobile version with one column and 6 rows of illustrations
+.mid-banner {
+    padding: $padding;
+}
+.container {
+    display: grid;
+    grid-template-rows: 1fr (repeat(6));
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6";
+   
+//tablet version with two columns and 3 rows of illustratios
+    @media (min-width: $tabletPortrait) {
+        grid-template-rows: 1fr (repeat(2));
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "item1 item2"
+        "item3 item4"
+        "item5 item6";
+    }
+//desctop version with three columns and two rows of illustrations
+    @media (min-width: $desktop) {
+        grid-template-rows: 1fr (repeat(3));
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "item1 item2 item3"
+        "item4 item5 item6";
+    }
+}
+
+//sizes change of illustraions
+.illustration {
+    width: 68vw;
+    height: auto;
+
+    @media (min-width: $tabletPortrait) {
+        width: 30vw;  
+    }
+
+    @media (min-width: $desktop) {
+        width: 20vw;
+    }
+}
+//styling illustrations
+.item {
+    background-color: rgba(208, 217, 226, 0.822);
+    margin: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.item > p {
+    padding: $padding/4 $padding/2 $padding/4 $padding/2;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #39374E;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-small;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @media (min-width: $tabletSmall) {
+        font-size: smaller;  
+    }
+
+    @media (min-width: $tabletPortrait) {
+        font-size: small;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: medium;
+    }
+}
