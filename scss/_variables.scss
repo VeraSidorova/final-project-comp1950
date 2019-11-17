@@ -11,6 +11,7 @@ $footer-bg-color: rgb(12, 64, 112);
 $accent-color: #79b89d;
 
 // Text Colors
+$header-color: #39374E;
 $text-color-dark: black;
 $text-color-light: white;
 
@@ -31,6 +32,7 @@ $wrapper-max-width: 80%;
 // Media Query Breakpoints
 $phoneSmall: em(320);
 $phonePortrait: em(420);
+$phoneBig: em(586);
 $tabletSmall: em(700);
 $tabletPortrait: em(850);
 $desktop: em(1920);
