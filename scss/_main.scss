@@ -2,16 +2,8 @@
 
 //top-banner styles//
 
-
-/* 
-
-  Based from this article from Divya Manian - 
-  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
-*/
-
 .banner-wrapper {
     font-family: 'Oswald', sans-serif;
-    color: $text-color-dark;
     text-align: center;
 }
 
@@ -28,6 +20,7 @@
     text-transform: uppercase;
     color: $header-color;
 }
+
 /*photo background for letters*/
 /* Clip text element */
 .clip-text {
@@ -69,7 +62,7 @@
 /*mid-banner styles*/
 //mobile version with one column and 6 rows of illustrations
 .mid-banner {
-    padding: $padding;
+    padding: $padding $padding 15px $padding;
 }
 .container {
     display: grid;
@@ -92,7 +85,8 @@
         "item3 item4"
         "item5 item6";
     }
-//desctop version with three columns and two rows of illustrations
+
+//desktop version with three columns and two rows of illustrations
     @media (min-width: $desktop) {
         grid-template-rows: 1fr (repeat(3));
         grid-template-columns: 1fr 1fr;
@@ -115,6 +109,7 @@
         width: 20vw;
     }
 }
+
 //styling illustrations
 .item {
     background-color: rgba(208, 217, 226, 0.822);
@@ -125,7 +120,7 @@
 
 .item > p {
     padding: $padding/4 $padding/2 $padding/4 $padding/2;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     color: #39374E;
     text-transform: uppercase;
     font-weight: bold;
@@ -146,4 +141,15 @@
     @media (min-width: $desktop) {
         font-size: medium;
     }
+}
+
+.item:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+//Back to top styling
+.bottom-banner {
+    display: flex;
+    justify-content: center;
+    padding: 15px $padding $padding $padding;
 }
