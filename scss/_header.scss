@@ -10,7 +10,7 @@ header {
         text-align: center;
         width: 100%;
         padding: $padding;
-        align-items: baseline;
+        align-items: center;
 
         @media (min-width: $tabletPortrait) {
             @include flex-layout-row;

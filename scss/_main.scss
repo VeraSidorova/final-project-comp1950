@@ -74,31 +74,17 @@
 .container {
     display: grid;
     grid-template-rows: 1fr (repeat(6));
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "item1"
-    "item2"
-    "item3"
-    "item4"
-    "item5"
-    "item6";
+    grid-template-columns: repeat(1, 1fr);
    
 //tablet version with two columns and 3 rows of illustratios
     @media (min-width: $tabletPortrait) {
         grid-template-rows: 1fr (repeat(2));
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "item1 item2"
-        "item3 item4"
-        "item5 item6";
+        grid-template-columns: repeat(2, 1fr);
     }
 //desctop version with three columns and two rows of illustrations
     @media (min-width: $desktop) {
         grid-template-rows: 1fr (repeat(3));
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "item1 item2 item3"
-        "item4 item5 item6";
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -114,6 +100,11 @@
     @media (min-width: $desktop) {
         width: 20vw;
     }
+}
+.item:hover {
+    opacity: 1.0;
+    background-color:rgb(116, 136, 150);
+    transition: 1s;
 }
 //styling illustrations
 .item {
