@@ -1,5 +1,6 @@
 //Main styles//
 
+//HOME PAGE STYLES
 //top-banner styles//
 
 .banner-wrapper {
@@ -152,4 +153,79 @@
     display: flex;
     justify-content: center;
     padding: 15px $padding $padding $padding;
+}
+
+//COURSE PAGE STYLES
+.course {
+    padding: $padding $padding 0px $padding;
+}
+
+//illustration styles
+.course > div {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "area";
+}
+
+//sizes change of illustraions
+.course .illustration {
+    width: 68vw;
+    height: auto;
+
+    @media (min-width: $tabletPortrait) {
+        width: 30vw;  
+    }
+
+    @media (min-width: $desktop) {
+        width: 20vw;
+    }
+}
+
+//lists styles
+.course ul {
+    list-style: none; /* Remove default bullets */
+    margin-right: 1em;
+  }
+  
+.course ul li::before {
+    content: "\2022";  /* \2022 is unicode for a bullet */
+    color: $brand-color; 
+    font-weight: bold; 
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space */
+    margin-left: -1em; /* Also needed for space */
+}
+
+//table styles
+
+table {
+    margin: 15px;
+    width: 95%;
+}
+
+th, td {
+    padding: $padding/2;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+thead {
+    background-color: #79b89d;
+}
+
+tfoot > tr {
+    background-color: #79b89d2c;
+}
+
+tr:hover {
+    background-color: #79b89d2c;
 }
