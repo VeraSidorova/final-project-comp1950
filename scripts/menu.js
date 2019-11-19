@@ -5,7 +5,7 @@
 
 // Show / Hide Menu
 const body = document.body;
-const btn = document.querySelector('.btn-menu');
+const btn_menu = document.querySelector('.btn-menu');
 
 const current_student = document.getElementById('current_student');
 const prospective_student = document.getElementById('prospective_student');
@@ -17,8 +17,8 @@ const login_form = document.getElementById('login_form');
 const login_submit_btn = document.getElementById('login_submit_btn'); 
 
 // Click Handler
-btn.addEventListener('click', _ => { body.classList.toggle('show') });
-btn.addEventListener('mousedown', (e) => { e.preventDefault(); });
+btn_menu.addEventListener('click', _ => { body.classList.toggle('show') });
+btn_menu.addEventListener('mousedown', (e) => { e.preventDefault(); });
 
 // Current/Prospective student handler
 current_student.addEventListener('change', _ => {
@@ -33,27 +33,23 @@ prospective_student.addEventListener('change', _ => {
 // Contact Form Submission
 contact_form.addEventListener('submit', (e) => { e.preventDefault(); });
 contact_submit_btn.addEventListener("click", _ => {
-    contact_inputs = contact_form.getElementsByTagName('input');
-    for (let i = 0; i < contact_inputs.length; i++) {
-        if (!contact_inputs[i].checkValidity()) {
-            alert("Please fill the form correctly");
-            return;
-        }
-    }
-    alert("Form Submitted! Thank you");
-    contact_form.reset();
+    handle_form_submission(contact_form, "Form Submitted! Thank you");
 })
 
 // Login Form Submission
 login_form.addEventListener('submit', (e) => { e.preventDefault(); });
 login_submit_btn.addEventListener("click", _ => {
-    login_inputs = login_form.getElementsByTagName('input');
-    for (let i = 0; i < login_inputs.length; i++) {
-        if (!login_inputs[i].checkValidity()) {
+    handle_form_submission(login_form, "Login Successful!");
+})
+
+function handle_form_submission(myForm, successMsg) {
+    form_inputs = myForm.getElementsByTagName('input');
+    for (let i = 0; i < form_inputs.length; i++) {
+        if (!form_inputs[i].checkValidity()) {
             alert("Please fill the form correctly");
             return;
         }
     }
-    alert("Login Successful!");
-    login_form.reset();
-})
+    alert(successMsg);
+    myForm.reset();
+}
