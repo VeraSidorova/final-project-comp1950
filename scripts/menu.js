@@ -26,6 +26,7 @@ current_student.addEventListener('change', _ => {
     document.getElementById('student_number').required = true;
 })
 prospective_student.addEventListener('change', _ => {
+    document.getElementById('student_number').value = '';
     document.getElementById('student_number').disabled = true;
     document.getElementById('student_number').required = false;
 })
