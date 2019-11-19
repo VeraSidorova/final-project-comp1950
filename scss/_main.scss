@@ -43,6 +43,16 @@
         font-size: 17vw;
         width: 71.5vw;
     }
+
+    @media (min-width: $desktopSmall) {
+        font-size: 13vw;
+        width: 55vw;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 11vw;
+        width: 45vw;
+    }
 }
 
 /* Use Background-size cover for photo background and no-repeat background */
@@ -106,8 +116,12 @@
         width: 30vw;  
     }
 
+    @media (min-width: $desktopSmall) {
+        width: 25vw;
+    }
+
     @media (min-width: $desktop) {
-        width: 20vw;
+        width: 14vw;
     }
 }
 

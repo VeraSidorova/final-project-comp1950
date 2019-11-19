@@ -3,10 +3,19 @@
     max-width: 100%;
     background-color: $wrapper-bg-color;
     margin-top: 0px;
-    z-index: -10;
 
     @media (min-width: $tabletSmall) {
-        max-width: $wrapper-max-width;
+        max-width: $wrapper-80;
         @include margin-center;
+    }
+
+    @media (min-width: $desktopSmall) {
+        max-width: $wrapper-60;
+        @include margin-center; 
+    }
+
+    @media (min-width: $desktop) {
+        max-width: $wrapper-50;
+        @include margin-center; 
     }
 }

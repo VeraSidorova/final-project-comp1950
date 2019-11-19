@@ -21,7 +21,9 @@ $brand-color-light: lighten($brand-color, 20);
 
 // Layout variables
 $padding: 30px;
-$wrapper-max-width: 80%;
+$wrapper-80: 80%;
+$wrapper-60: 60%;
+$wrapper-50: 50%;
 
 // Function to
 // Convert Px to Ems
@@ -35,4 +37,5 @@ $phonePortrait: em(420);
 $phoneBig: em(586);
 $tabletSmall: em(700);
 $tabletPortrait: em(850);
+$desktopSmall: em(1420);
 $desktop: em(1920);
