@@ -1,17 +1,10 @@
 //Main styles//
 
+//HOME PAGE STYLES
 //top-banner styles//
-
-
-/* 
-
-  Based from this article from Divya Manian - 
-  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
-*/
 
 .banner-wrapper {
     font-family: 'Oswald', sans-serif;
-    color: $text-color-dark;
     text-align: center;
 }
 
@@ -28,6 +21,7 @@
     text-transform: uppercase;
     color: $header-color;
 }
+
 /*photo background for letters*/
 /* Clip text element */
 .clip-text {
@@ -49,6 +43,16 @@
         font-size: 17vw;
         width: 71.5vw;
     }
+
+    @media (min-width: $desktopSmall) {
+        font-size: 13vw;
+        width: 55vw;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: 11vw;
+        width: 45vw;
+    }
 }
 
 /* Use Background-size cover for photo background and no-repeat background */
@@ -69,22 +73,37 @@
 /*mid-banner styles*/
 //mobile version with one column and 6 rows of illustrations
 .mid-banner {
-    padding: $padding;
+    padding: $padding $padding 15px $padding;
 }
 .container {
     display: grid;
     grid-template-rows: 1fr (repeat(6));
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6";
    
 //tablet version with two columns and 3 rows of illustratios
     @media (min-width: $tabletPortrait) {
-        grid-template-rows: 1fr (repeat(2));
-        grid-template-columns: repeat(2, 1fr);
-    }
-//desctop version with three columns and two rows of illustrations
-    @media (min-width: $desktop) {
         grid-template-rows: 1fr (repeat(3));
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "item1 item2"
+        "item3 item4"
+        "item5 item6";
+    }
+
+//desktop version with three columns and two rows of illustrations
+    @media (min-width: $desktop) {
+        grid-template-rows: 1fr (repeat(2));
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "item1 item2 item3"
+        "item4 item5 item6";
     }
 }
 
@@ -97,15 +116,15 @@
         width: 30vw;  
     }
 
+    @media (min-width: $desktopSmall) {
+        width: 25vw;
+    }
+
     @media (min-width: $desktop) {
-        width: 20vw;
+        width: 14vw;
     }
 }
-.item:hover {
-    opacity: 1.0;
-    background-color:rgb(116, 136, 150);
-    transition: 1s;
-}
+
 //styling illustrations
 .item {
     background-color: rgba(208, 217, 226, 0.822);
@@ -116,7 +135,7 @@
 
 .item > p {
     padding: $padding/4 $padding/2 $padding/4 $padding/2;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     color: #39374E;
     text-transform: uppercase;
     font-weight: bold;
@@ -137,4 +156,90 @@
     @media (min-width: $desktop) {
         font-size: medium;
     }
+}
+
+.item:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+//Back to top styling
+.bottom-banner {
+    display: flex;
+    justify-content: center;
+    padding: 15px $padding $padding $padding;
+}
+
+//COURSE PAGE STYLES
+.course {
+    padding: $padding $padding 0px $padding;
+}
+
+//illustration styles
+.course > div {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "area";
+}
+
+//sizes change of illustraions
+.course .illustration {
+    width: 68vw;
+    height: auto;
+
+    @media (min-width: $tabletPortrait) {
+        width: 30vw;  
+    }
+
+    @media (min-width: $desktop) {
+        width: 20vw;
+    }
+}
+
+//lists styles
+.course ul {
+    list-style: none; /* Remove default bullets */
+    margin-right: 1em;
+  }
+  
+.course ul li::before {
+    content: "\2022";  /* \2022 is unicode for a bullet */
+    color: $brand-color; 
+    font-weight: bold; 
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space */
+    margin-left: -1em; /* Also needed for space */
+}
+
+//table styles
+
+table {
+    margin: 15px;
+    width: 95%;
+}
+
+th, td {
+    padding: $padding/2;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: left;
+}
+
+thead {
+    background-color: #79b89d;
+}
+
+tfoot > tr {
+    background-color: #79b89d2c;
+}
+
+tr:hover {
+    background-color: #79b89d2c;
 }
