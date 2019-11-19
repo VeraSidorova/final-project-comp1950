@@ -1,36 +1,57 @@
 // Footer Styles
+//layout
 footer {
     display: grid; 
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    "footer-big footer-small"
-    "footer-row footer-row";
+    "footer-big" 
+    "footer-small"
+    "footer-row";
     background-color: $footer-bg-color;
     color: $text-color-light;
 
     @media (min-width: $phonePortrait) {
-        grid-template-columns: 3fr 2fr 1fr;
+        grid-template-columns: 2fr 0.3fr 1.3fr;
         grid-template-rows: 1fr auto;
         grid-template-areas:
         "footer-big . footer-small"
         "footer-row footer-row footer-row";
     }
+
+    @media (min-width: $tabletPortrait) {
+        grid-template-columns: 1.5fr 0.5fr 0.6fr; 
+    }
 }
-
-
-
+//heading styles
 footer > div > h2 {
     color: white;
     font-size: medium;
-    margin: 0 15px 0 0;
-}
+    text-align: center;
+    margin: 0px;
 
+    @media (min-width: $phonePortrait) {
+        text-align: left; 
+    }
+}
+//text styles
 footer > div > p {
-    font-size: x-small;
+    font-size: small;
    margin: 1em 0 0 0;
+   line-height: 1.4;
 }
 
+footer > div > div > p {
+    font-size: small;
+    margin: 1em 0 0 0;
+    line-height: 1.4;
+
+   @media (min-width: $phonePortrait) {
+    width: 50%;
+   }
+}
+
+//footer items styls
 .footer-big {
     grid-area: footer-big;
     margin: 30px;
@@ -43,21 +64,23 @@ footer > div > p {
 
 .footer-row {
     grid-area: footer-row;
-background-color: rgba(255, 255, 255, 0.3);
-padding: $padding/2 $padding $padding/2 $padding;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: $padding/2 $padding $padding/2 $padding;
 }
 
-footer > div:last-child {
+//Scaling from one to two columns
+.two-columns {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    p {
-        margin: 0 0 0 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: center;
+    
+    @media (min-width: $phonePortrait) {
+        text-align: left; 
     }
 
     @media (min-width: $phoneBig) {
-        align-items: flex-end;  
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
