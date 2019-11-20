@@ -1,0 +1,41 @@
+.schedule-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+    margin: 0px;
+
+    //tablet version with two columns and 3 rows of illustratios
+    @media (min-width: $tabletSmall) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+    //desktop version with three columns and two rows of illustrations
+    @media (min-width: $desktopSmall) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.schedule-grid a {
+    background-color: #eff1f3;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: left;
+    color: black;
+    border-radius: 20px;
+}
+
+.schedule-grid a:hover {
+    transition: transform .5s;
+    transform: scale(1.02);
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+.schedule-grid h3 {
+    text-align: center;
+    text-decoration: underline;
+    color: $accent-color;
+}
