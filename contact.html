@@ -54,13 +54,17 @@
                             Current Student
                         </label>
                         <label>
-                            <input type="radio" name="student_type" id="prospective_student" value="prospective">
+                            <input type="radio" name="student_type" id="prospective_student" value="prospective" checked="checked">
                             Prospective Student
                         </label>
                     </p>
                     <p>
                         <label>BCIT Student Number</label><br>
                         <input type="text" name="student_number" id="student_number" pattern="^A[0-9]{8}" title="Student number must start with 'A' followed by 8 digits" disabled>
+                    </p>
+                    <p>
+                        <label>Comments:</label><br>
+                        <textarea rows="6" cols="50">Your message...</textarea>
                     </p>
                     <p>
                     <button type="submit" id="contact_submit_btn">Submit</button>

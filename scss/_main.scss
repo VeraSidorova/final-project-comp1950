@@ -117,6 +117,7 @@
     margin: 15px;
     text-align: center;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .item > p {
@@ -146,6 +147,8 @@
 
 .item:hover {
     background-color:rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 //Back to top styling

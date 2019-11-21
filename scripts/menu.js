@@ -1,8 +1,5 @@
 // JavaScript Document
 
-
-//For menu
-
 // Show / Hide Menu
 const body = document.body;
 const btn_menu = document.querySelector('.btn-menu');
@@ -17,26 +14,31 @@ const login_form = document.getElementById('login_form');
 btn_menu.addEventListener('click', _ => { body.classList.toggle('show') });
 btn_menu.addEventListener('mousedown', (e) => { e.preventDefault(); });
 
-// Current/Prospective student handler
-current_student.addEventListener('change', _ => {
-    document.getElementById('student_number').disabled = false;
-    document.getElementById('student_number').required = true;
-})
-prospective_student.addEventListener('change', _ => {
-    document.getElementById('student_number').value = '';
-    document.getElementById('student_number').disabled = true;
-    document.getElementById('student_number').required = false;
-})
+// If on Contact Form
+if (contact_form != null){
+    // Current/Prospective student handler
+    current_student.addEventListener('change', _ => {
+        document.getElementById('student_number').disabled = false;
+        document.getElementById('student_number').required = true;
+    });
+    prospective_student.addEventListener('change', _ => {
+        document.getElementById('student_number').value = '';
+        document.getElementById('student_number').disabled = true;
+        document.getElementById('student_number').required = false;
+    });
+    // Contact Form Submission
+    contact_form.addEventListener('submit', (e) => { 
+        e.preventDefault();
+        alert("Form has been Submitted! Thank you");
+        contact_form.reset();
+    });
+}
 
-// Contact Form Submission
-contact_form.addEventListener('submit', (e) => { 
-    e.preventDefault();
-    alert("Form Submitted! Thank you");
-    contact_form.reset();
-});
-
-login_form.addEventListener('submit', (e) => { 
-    e.preventDefault(); 
-    alert("Login Successful!");
-    login_form.reset();
-});
+// If on Login Form
+if (login_form != null){
+    login_form.addEventListener('submit', (e) => { 
+        e.preventDefault(); 
+        alert("Login Successful!");
+        login_form.reset();
+    });
+}
