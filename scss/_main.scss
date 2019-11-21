@@ -9,7 +9,7 @@
 }
 
 .top-banner {
-    border-bottom: dotted 2px rgba(208, 217, 226, 0.822);;
+    border-bottom: dotted 2px rgba(208, 217, 226, 0.822);
 }
 
 .title {
@@ -159,7 +159,7 @@
 }
 
 .item:hover {
-    background-color: rgb(255, 255, 255);
+   background-color:rgba(0, 0, 0, 0.4);
 }
 
 //Back to top styling
@@ -242,4 +242,30 @@ tfoot > tr {
 
 tr:hover {
     background-color: #79b89d2c;
+}
+
+//LESSONS PAGE STYLES
+.item > a > p {
+    padding: $padding/4 $padding/2 $padding/4 $padding/2;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #39374E;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-small;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @media (min-width: $tabletSmall) {
+        font-size: smaller;  
+    }
+
+    @media (min-width: $tabletPortrait) {
+        font-size: small;
+    }
+
+    @media (min-width: $desktop) {
+        font-size: medium;
+    }
 }
