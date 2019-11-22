@@ -184,7 +184,7 @@
   }
   
 .course ul li::before {
-    content: "\2022";  /* \2022 is unicode for a bullet */
+    content: "\25CF";  /* \2022 is unicode for a bullet */
     color: $brand-color; 
     font-weight: bold; 
     display: inline-block; /* Needed to add space between the bullet and the text */

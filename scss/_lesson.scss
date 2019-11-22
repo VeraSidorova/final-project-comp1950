@@ -7,6 +7,24 @@
         color: $accent-color;
     }
     h2, h3 {
-        color: $brand-color;
+        color: $header-color;
     }
+}
+
+section ul {
+    list-style: none; /* Remove default bullets */
+    margin-right: 1em;
+}
+
+section ul li::before {
+    content: "\25CF";  /* \2022 is unicode for a bullet */
+    color: $brand-color; 
+    font-weight: bold; 
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space */
+    margin-left: -1em; /* Also needed for space */
+}
+
+section ul li ul li::before {
+    content: "\25CB";
 }
