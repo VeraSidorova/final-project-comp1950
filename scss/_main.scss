@@ -122,28 +122,18 @@
 }
 
 .item > p {
-    padding: $padding/4 $padding/2 $padding/4 $padding/2;
+    padding: 5px $padding/2 5px $padding/2;
     background-color: rgba(255, 255, 255, 0.9);
     color: #39374E;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: x-small;
+    font-size: 0.8em;
     margin: 0;
     position: absolute;
     bottom: 0;
     width: 100%;
 
-    @media (min-width: $tabletSmall) {
-        font-size: smaller;  
-    }
-
-    @media (min-width: $tabletPortrait) {
-        font-size: small;
-    }
-
-    @media (min-width: $desktop) {
-        font-size: medium;
-    }
+   
 }
 
 .item:hover {
@@ -236,26 +226,14 @@ tr:hover {
 
 //LESSONS PAGE STYLES
 .item > a > p {
-    padding: $padding/4 $padding/2 $padding/4 $padding/2;
+    padding: 5px $padding/2 5px $padding/2;
     background-color: rgba(255, 255, 255, 0.9);
     color: #39374E;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: x-small;
+    font-size: 0.8em;
     margin: 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-
-    @media (min-width: $tabletSmall) {
-        font-size: smaller;  
-    }
-
-    @media (min-width: $tabletPortrait) {
-        font-size: small;
-    }
-
-    @media (min-width: $desktop) {
-        font-size: medium;
-    }
 }
