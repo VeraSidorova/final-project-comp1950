@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">    <title>BCIT - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">    <title>BCIT - Contact</title>
 </head>
 <body>
     <header>
@@ -30,25 +30,47 @@
             <a name="top"></a>
            <div class="top-banner">
                 <div class="banner-wrapper">
-                    <p class="title">Welcome to</p>
-                    <div class="clip-text clip-text_one clip-text--cover">COMP1950</div>
+                    <p class="title">Contact US</p>
                 </div>
             </div>
 
            <div class="mid-banner">
-               <h2>Pure inspiration</h2>
-               <p>Just imagine that after taking COMP1950 course your web development skills will 
-                   expand dramatically! You will get exact knowledge as described in vacancies requairements.</p>
-               <p>Bellow are listed some components of "juce" which was squeezed out of modern 
-                   technologies by highly experienced teachers.</p>
-               <div class="container">
-                   <div class="item item1"><img src="images/undraw_code_typing_7jnv.svg" class="illustration" alt="HTML technologies"><p>Latest HTML technologies</p></div>
-                   <div class="item item2"><img src="images/undraw_real-time_sync_o57k.svg" class="illustration" alt="Responsive design"><p>Responsive design with CSS3</p></div>
-                   <div class="item item3"><img src="images/undraw_static_assets_rpm6.svg" class="illustration" alt="JavaScript"><p>Pages behaviour with JavaScript</p></div>
-                   <div class="item item4"><img src="images/undraw_version_control_9bpv.svg" class="illustration" alt="Source control"><p>Source control using GIT</p></div>
-                   <div class="item item5"><img src="images/undraw_insert_block_efyb.svg" class="illustration" alt="Secrets of good design"><p>Tips for professional looking design</p></div>
-                   <div class="item item6"><img src="images/undraw_bug_fixing_oc7a.svg" class="illustration" alt="Debugging"><p>Plus a lot of tricks for debugging</p></div>
-               </div>
+                <form action="/" method="post" id="contact_form">
+                    <p>
+                        <label>First name</label>
+                        <input type="text" name="first_name" required>
+                    </p>
+                    <p>
+                        <label>Last name</label>
+                        <input type="text" name="last_name" required>
+                    </p>
+                    <p>
+                        <label>Email</label><br>
+                        <input type="email" name="email" required>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="student_type" id="current_student" value="current" required>
+                            Current Student
+                        </label>
+                        <label>
+                            <input type="radio" name="student_type" id="prospective_student" value="prospective" checked="checked">
+                            Prospective Student
+                        </label>
+                    </p>
+                    <p>
+                        <label>BCIT Student Number</label><br>
+                        <input type="text" name="student_number" id="student_number" pattern="^A[0-9]{8}" title="Student number must start with 'A' followed by 8 digits" disabled>
+                    </p>
+                    <p>
+                        <label>Comments:</label><br>
+                        <textarea rows="6" cols="50">Your message...</textarea>
+                    </p>
+                    <p>
+                    <button type="submit" id="contact_submit_btn">Submit</button>
+                    <button type="reset">Reset form</button>
+                    </p>
+                </form>
            </div>
            <div class="bottom-banner">
                 <button><a href="#">Back to top</a></button>
