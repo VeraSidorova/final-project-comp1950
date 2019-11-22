@@ -1,7 +1,10 @@
 .day-lessons {
     a {
-        color: black;
+        color: $brand-color;
         text-decoration: underline;
+    }
+    a:hover {
+        color: $accent-color;
     }
     h2, h3 {
         color: $brand-color;
