@@ -1,15 +1,13 @@
 .schedule-grid {
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 30px;
     grid-template-columns: repeat(1, 1fr);
-    padding: $padding;
+    padding: 45px;
     margin: 0px;
 
     //tablet version with two columns and 3 rows of illustratios
     @media (min-width: $tabletSmall) {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
-        padding: 30px;
     }
 
     //desktop version with three columns and two rows of illustrations
@@ -20,7 +18,6 @@
 
 .schedule-grid a {
     background-color: rgba(208, 217, 226, 0.822);
-    margin: 15px;
     padding: 20px;
     font-size: 20px;
     text-align: left;
