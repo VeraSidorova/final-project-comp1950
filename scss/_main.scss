@@ -79,7 +79,7 @@
 .container {
     display: grid;
     grid-template-rows: 1fr (repeat(6));
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr (repeat(1, 1fr));
    
 //tablet version with two columns and 3 rows of illustratios
     @media (min-width: $tabletPortrait) {
