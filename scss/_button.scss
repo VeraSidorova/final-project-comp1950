@@ -9,6 +9,16 @@ button {
     outline: none;
 }
 
+.back-to-top {
+    color: $text-color-light;
+    text-transform: uppercase;
+    background-color: $accent-color;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
 //Hide Menu buttom only on skreens biger than mobile
 .btn-menu {
     display: block;
