@@ -131,15 +131,19 @@
     margin: 0;
     position: absolute;
     bottom: 0;
-    width: 100%;
-
-   
+    width: 100%; 
 }
 
 .item:hover {
     background-color:rgba(0, 0, 0, 0.4);
     transition: 0.5s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+//Filter for illustration
+.illustration {
+    -webkit-filter: opacity(0.7) grayscale(0.5);
+  filter: opacity(0.7) grayscale(0.5);
 }
 
 //Back to top styling
