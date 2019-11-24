@@ -26,7 +26,7 @@
 /*photo background for letters*/
 /* Clip text element */
 .clip-text {
-    font-size: 20vw;
+    font-size: 18vw;
     font-weight: bold;
     line-height: 1;
     position: relative;
@@ -41,17 +41,17 @@
     -webkit-text-fill-color: transparent;
 
     @media (min-width: $tabletSmall) {
-        font-size: 17vw;
+        font-size: 16vw;
         width: 71.5vw;
     }
 
     @media (min-width: $desktopSmall) {
-        font-size: 13vw;
+        font-size: 12vw;
         width: 55vw;
     }
 
     @media (min-width: $desktop) {
-        font-size: 11vw;
+        font-size: 10vw;
         width: 45vw;
     }
 }

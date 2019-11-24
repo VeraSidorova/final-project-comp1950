@@ -25,3 +25,11 @@ li {
 nav a {
     font-family: $heading-font;
 }
+
+.email {
+    color: $brand-color;
+    text-decoration: underline;
+}
+.email:hover {
+    color: $accent-color;
+}
