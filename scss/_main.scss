@@ -98,6 +98,8 @@
 .illustration {
     width: 68vw;
     height: auto;
+    align-self: center;
+    justify-self: center;
 
     @media (min-width: $tabletPortrait) {
         width: 30vw;  
@@ -114,6 +116,7 @@
 
 //styling illustrations
 .item {
+    display: grid;
     background-color: rgba(208, 217, 226, 0.822);
     margin: 15px;
     text-align: center;
@@ -132,6 +135,16 @@
     position: absolute;
     bottom: 0;
     width: 100%; 
+}
+
+.item > a {
+    display: grid;
+}
+
+.item > a > img {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
 }
 
 .item:hover {
