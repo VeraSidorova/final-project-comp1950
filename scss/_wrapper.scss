@@ -10,12 +10,12 @@
     }
 
     @media (min-width: $desktopSmall) {
-        max-width: $wrapper-60;
+        max-width: $wrapper-75;
         @include margin-center; 
     }
 
     @media (min-width: $desktop) {
-        max-width: $wrapper-50;
+        max-width: $wrapper-70;
         @include margin-center; 
     }
 }
