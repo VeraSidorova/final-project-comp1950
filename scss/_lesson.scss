@@ -9,6 +9,20 @@
     h2, h3 {
         color: $header-color;
     }
+    .responsive-image {
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: auto;
+        max-width: 600px;
+        
+    }
+    .responsive-code-image {
+        display: block;
+        margin: 10px;
+        height: auto;
+        max-width: 300px;        
+    }
 }
 
 section ul {

@@ -6,7 +6,7 @@
     margin: 0px;
 
     //tablet version with two columns and 3 rows of illustratios
-    @media (min-width: $tabletSmall) {
+    @media (min-width: $tabletPortrait) {
         grid-template-columns: repeat(2, 1fr);
     }
 
